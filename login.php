@@ -28,6 +28,7 @@
         }
         else{
             if(!$rErr){
+                $pass = md5($pass);
                 $sql = "SELECT * from users where name='$name' AND password='$pass'";
                 $result = mysqli_query($conn, $sql);
                 $num = mysqli_num_rows($result);

@@ -40,6 +40,7 @@
         }
         else{
             if(!$rErr){
+                $pass = md5($pass);
                 $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$pass')";
                 $result = mysqli_query($conn, $sql);
                 if($result){
